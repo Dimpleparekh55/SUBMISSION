@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.div1 {
+    /* background-color: #F0578B; */
+    height: 100px;
+    width: 150px;
+}
+    </style>
+</head>
+<body>
+    Set Color : <input type="color" id="head">
+    <button id="btn">Set Color</button>    
+<hr/>
+<div id="div1">Hello world</div>
+<script>
+
+    let change_color = document.getElementById("head");
+    let btnclick = document.getElementById("btn");
+    btnclick.addEventListener("click", function() {
+            document.querySelector(".div1") = change_color;
+    // document.body.style.backgroundColor = change_color;
+
+
+    })
+</script>
+</body>
+</html>

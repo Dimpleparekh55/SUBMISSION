@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">value1:</label>
+<input type="text" name="v1" id="v1"/>
+<br/> <br/>
+<label for="">value2:</label>
+<input type="text" name="v2" id="v2"/>
+<br/> <br/>
+<button id="btn" onclick="myfunction()">Check</button>
+<p id="xyz"></p>
+<script>
+function myfunction() {
+let a = document.getElementById("v1").value
+let b = document.getElementById("v2").value
+if (a == b) {
+    document.getElementById("xyz").innerHTML = "both value are same"
+} else {
+    document.getElementById("xyz").innerHTML = "both value are not same"
+}
+}
+</script>
+</body>
+</html>
