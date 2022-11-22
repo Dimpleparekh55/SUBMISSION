@@ -1,0 +1,72 @@
+Module (JQuery Basic, Effects & Advanced) – 5
+
+
+• What is jQuery?
+Ans. jQuery is a fast and concise JavaScript Library that simplifies HTML document
+traversing, event handling, animating, and Ajax interactions for rapid web
+development. jQuery is designed to change the way that you write JavaScript.
+jQuery is a multi-browser JavaScript library designed to simplify the client-side
+scripting of HTML. It was released in January 2006 at BarCamp NYC by John Resig. It
+is currently developed by a team of developers led by Dave Methvin. Used by over
+55% of the 10,000 most visited websites, jQuery is the most popular JavaScript
+library in use today.
+jQuery's syntax is designed to make it easier to navigate a document, select DOM
+elements, create animations, handle events, and develop Ajax applications. jQuery
+also provides capabilities for developers to create plug-ins on top of the JavaScript
+library. This enables developers to create abstractions for low-level interaction and
+animation, advanced effects and high-level, theme-able widgets. The modular
+approach to the jQuery library allows the creation of powerful dynamic web pages
+and web applications.
+
+jQuery includes the following features:
+Events
+Effects and animations
+Ajax
+Extensibility through plug-ins
+Utilities - such as user agent information, feature detection
+Multi-browser (not to be confused with cross-browser) support.
+
+• How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery , JQuery Animation?
+Ans. The addClass() method is an inbuilt method in jQuery UI framework which is used to manage user interface visual effects. This method adds class to all selected elements along with animating all the defined styles in CSS properties. It basically manages animation methods for text-indentation, width, height, padding, margins, font-sizes and letter spacing providing a smooth transitions of effects.
+
+The removeClass() method is an inbuilt method in jQuery which is used to remove one or more class names from the selected element.
+
+The animate() method is an inbuilt method in jQuery which is used to change the state of the element with CSS style. This method can also be used to change the CSS property to create the animated effect for the selected element.
+
+• How to create slider with animation?
+Ans. With jQuery you can create a sliding effect on elements.
+
+jQuery has the following slide methods:
+
+slideDown()
+slideUp()
+slideToggle()
+
+The jQuery slideDown() method is used to slide down an element.
+
+Syntax:
+
+$(selector).slideDown(speed,callback);
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+
+The optional callback parameter is a function to be executed after the sliding completes.
+
+The jQuery slideUp() method is used to slide up an element.
+
+Syntax:
+
+$(selector).slideUp(speed,callback);
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+
+The optional callback parameter is a function to be executed after the sliding completes.
+
+The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+
+If the elements have been slid down, slideToggle() will slide them up.
+
+If the elements have been slid up, slideToggle() will slide them down.
+
+$(selector).slideToggle(speed,callback);
+The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+
+The optional callback parameter is a function to be executed after the sliding completes.
