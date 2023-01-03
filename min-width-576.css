@@ -1,0 +1,102 @@
+@media (min-width: 576px) {
+  .menu-header .back-image {
+    height: 500px;
+  }
+
+  .menu-header .btn {
+    display: block;
+  }
+
+  /* Menubar */
+
+  .menu-header .header-nav .navi {
+    display: none;
+  }
+
+  /* back-image content */
+
+  /* 2nd Section */
+
+  .best-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-info .images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .best-info .images img {
+    height: 360px;
+    width: 330px;
+  }
+
+  /* 3rd Product Section */
+  .product .product-info {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .product .product-info .info1 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product .product-info .info2 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product .product-info .info3 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Services Content */
+
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Services Types of Coffee */
+
+  .services .types {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio 8 images section */
+
+  .portfolio .gallery-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio .gallery-images .image {
+    align-items: center;
+    justify-items: center;
+  }
+
+  /* Blog Section */
+  
+  .blog-images {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Footer Section */
+
+  .footer-text {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

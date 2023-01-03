@@ -1,0 +1,121 @@
+@media (min-width: 992px) {
+  .menu-header .back-image {
+    height: 700px;
+  }
+
+  .menu-header .btn {
+    display: none;
+  }
+
+  /* Menubar */
+
+  .menu-header .header-nav .navi {
+    display: block;
+    flex: 2;
+  }
+
+  .menu-header .navi li a {
+    align-items: center;
+  }
+
+  /* back-image content */
+
+  .content {
+    width: 50%;
+    position: absolute;
+    top: 150px;
+  }
+
+  /* 2nd Section */
+
+  .best-info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .best-info .infor {
+    flex: 1;
+    }
+
+  .best-info .images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .best-info .images img {
+    height: 301px;
+    width: 191px;
+  }
+
+  /* 3rd Product Section */
+
+  .product .product-info {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .product .product-info .info1 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product .product-info .info2 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product .product-info .info3 .banner-info {
+    width: 370px;
+    height: 114px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Services Content */
+
+  .services {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Services Types of Coffee */
+
+  .services .types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Portfolio 8 images section */
+
+  .portfolio .gallery-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .portfolio .gallery-images .image {
+    align-items: center;
+    justify-items: center;
+  }
+
+  /* Blog Section */
+
+  .blog-images {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* Footer Section */
+
+  .footer-text {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
