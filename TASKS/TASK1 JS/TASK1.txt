@@ -1,0 +1,11 @@
+to do
+
+form
+
+fname
+lastname
+email
+submit button
+- form vaildation - should not empty
+- data submit - success alert
+- data store in local storage

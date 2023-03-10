@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form name="myform" onsubmit="return validate()">
+    First Name : <input type="text" placeholder="Enter your first name" name="fname" id="name1">
+    <br>
+    <br>
+    Last Name : <input type="text" placeholder="Enter your last name" name="lname" id="name2">
+    <br>
+    <br>
+    Email Id : <input type="email" placeholder="Enter your email id" name="email" id="name3">
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="validate()" id="btn" value="Submit">
+  </form>
+  <p id="demo"></p>
+
+  
+</body>
+<script>
+
+  function validate() {
+    var fname = document.forms["myform"]["fname"].value;
+    if (fname == null || fname == "") {
+      alert("Please enter your first name.");
+      document.getElementById("name1").focus();
+      return false;
+    }
+    var lname = document.forms["myform"]["lname"].value;
+    if (lname == null || lname == "") {
+      alert("Please enter your last name.");
+      document.getElementById("name2").focus();
+      return false;
+    }
+    var email = document.forms["myform"]["email"].value;
+    if (email == null || email == "") {
+      alert("Please enter your email id.");
+      document.getElementById("name3").focus();
+      return true;
+    }
+    var txt;
+    txt = "Your data has been submitted";
+    alert("Your data has been saved successfully!")
+    document.getElementById("demo").innerHTML = txt;
+
+    localStorage.setItem("fname", fname)
+    localStorage.setItem("lname", lname)
+    localStorage.setItem("email", email)
+
+    localStorage.getItem("fname")
+    localStorage.getItem("lname")
+    localStorage.getItem("email")
+
+  }
+
+
+</script>
+</html>

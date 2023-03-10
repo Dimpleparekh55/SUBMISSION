@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script> -->
+
+  <style>
+    form {
+      margin: 20px;
+      gap: 15px;
+      display: flex;
+    }
+
+    input {
+      border: 1px solid S#dddddd;
+    }
+
+    #form_submit {
+      border: none;
+      height: 25px;
+      width: 55px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    #tbuser {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 70%;
+      margin: 30px auto;
+      display: none;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f6f6f6;
+    }
+
+    td button {
+      background-color: rgb(158, 69, 69);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      height: 32px;
+      width: 140px;
+      font-size: 17px;
+    }
+
+    #error1 {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="myform" method="post" action="">
+    <label for="form_fname">First Name:</label>
+    <input type="text" id="form_fname" name="fname"></input>
+
+    <label for="form_lname">Last Name:</label>
+    <input type="text" id="form_lname" name="lname"></input>
+
+    <!-- Submit Button -->
+    <button type="submit" id="form_submit">ADD</button>
+    <p id="error1"></p>
+  </form>
+
+  <table id="tbuser">
+    <tr id="tableHead">
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Delete</th>
+    </tr>
+  </table>
+</body>
+
+<script>
+
+  $(document).ready(function () {
+    $("#form_submit").click(function () {
+      var firstname = $("#form_fname").val();
+      var lastname = $("#form_lname").val();
+      var specialChars = /[!@#$%^&*()_+\-=\[\]{};'`:"\\|,.<>\/?0-9]/;
+      if (firstname == null || firstname == "") {
+        $("#error1").text("*Please enter first name");
+        $("#form_fname").focus();
+        return false;
+      } else if (firstname.match(specialChars)) {
+        alert("Only characters A-Z and a-z are allowed!")
+        $("#form_fname").focus();
+        return false;
+      } else if (lastname == null || lastname == "") {
+        $("#error1").text("*Please enter last name");
+        $("#form_lname").focus();
+        return false;
+      } else if (lastname.match(specialChars)) {
+        alert("Only characters A-Z and a-z are allowed!")
+        $("#form_lname").focus();
+        return false;
+      } else (confirm("Are you sure want to proceed?"))
+      {
+        $("#error1").text("");
+        $("#tbuser").append(
+          "<tr class='rowAdd'>" +
+          "<td>" + $("#form_fname").val() + "</td>" +
+          "<td>" + $("#form_lname").val() + "</td>" +
+          "<td>" + "<button class='rowdelete' >" + 'Delete' + "</button>" + "</td>" + "</tr>");
+        $("#tbuser").show();
+        return false;
+      }
+    });
+  });
+
+
+  $(document).on("click", ".rowdelete", function () {
+    var result = confirm("Are you sure want to delete?");
+    // $(this).closest("tr").addClass('delete');
+    if (result == true) {
+      $(this).closest("tr").addClass('delete');
+      $(".rowAdd").each(function () {
+        $('#tbuser').find("tr.delete").remove();
+        return false;
+      });
+      var rowCount = $('tr.rowAdd').length;
+      if (rowCount == 0) {
+        $("#tableHead").hide();
+        return false;
+      }
+    }
+    else (result == false)
+    {
+      // $(".rowdelete").closest("tr").removeClass('delete');
+      return false;
+    }
+  });
+
+</script>
+
+</html>
