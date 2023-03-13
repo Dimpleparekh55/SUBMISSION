@@ -1,0 +1,11 @@
+remove add btn confirmation - done
+show head after delete & hide table - done
+show error msg for both blanks - done
+improve delete button code - done
+empty text area after submit - done
+
+Query
+fname - error not showing
+blur()
+
+
